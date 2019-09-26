@@ -54,10 +54,6 @@
     with_items: "{{ vmcreate.results }}"
     ignore_errors: true
 
-  - name: collect info
-    ec2_instance_facts:
-      ec2_region: eu-west-1
-
   - name: Create a dictionary of all of the server names and their instance_ids
     set_fact:
      server_names: "{{ (server_names | default({})) | combine({ vmcreate.item.public_dns_name: vmcreate.item.instance_ids[0] }) }}"
