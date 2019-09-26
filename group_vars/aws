@@ -13,6 +13,7 @@ ec2_tag: rheldemo
 ec2_tag_name_prefix:
 ec2_hosts: all
 wait_for_port: 22
+vm_prefix: aws 
 
 # This user name will be set by Tower, when run through Tower
 tower_user_name:
