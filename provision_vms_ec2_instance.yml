@@ -63,7 +63,7 @@
 
   - name: Setup in-memory inventory
     add_host:
-      hostname: "{{ vmcreate.results.public_ip }}"
+      hostname: "{{ vmcreate.public_ip }}"
       groups: just_created_vms
     with_items: "{{ ec2_jobs }}"
 
