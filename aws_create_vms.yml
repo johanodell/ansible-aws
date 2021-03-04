@@ -40,6 +40,7 @@
       region: "{{ ec2_region }}"
       instance_tags: "{'ansible_group':'rheldemo', 'type':'{{ ec2_instance_type }}', 'group':'{{ ec2_security_group }}', 'Name':'rheldemo'}"
       count: "{{ ec2_instance_count }}"
+      create_instances: "{{ ec2_instance_count }}"
       wait: true
     register: ec2
 
